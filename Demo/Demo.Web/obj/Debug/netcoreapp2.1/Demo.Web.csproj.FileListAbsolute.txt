@@ -1,0 +1,3 @@
+C:\Users\stman\source\repos\stephenmann\WebAppDemo\Demo\Demo.Web\obj\Debug\netcoreapp2.1\Demo.Web.csproj.CoreCompileInputs.cache
+C:\Users\stman\source\repos\stephenmann\WebAppDemo\Demo\Demo.Web\obj\Debug\netcoreapp2.1\Demo.Web.AssemblyInfoInputs.cache
+C:\Users\stman\source\repos\stephenmann\WebAppDemo\Demo\Demo.Web\obj\Debug\netcoreapp2.1\Demo.Web.AssemblyInfo.cs
