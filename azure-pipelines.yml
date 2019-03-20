@@ -14,8 +14,11 @@ pool:
 
 variables:
 
-    Parameters.solution: '**\*.sln' #Global param
-    Parameters.ArtifactName: 'drop' #Global param
+    Parameters.solution: '**\*.sln' #Build param
+    Parameters.ArtifactName: 'drop' #Build param
+    Parameters.ConnectedServiceName: 'WebAppDemoRg' #Release param
+    Parameters.WebAppKind: 'webApp' #Release param
+    Parameters.WebAppName: 'WebAppDemo' #Release param
     buildConfiguration: 'Release'
     BuildPlatform: 'any cpu'
 
@@ -106,4 +109,14 @@ steps:
   displayName: 'Archive $(Build.BinariesDirectory)'
 
 
+- task: AzureRmWebAppDeployment@4
 
+  displayName: 'Deploy Azure App Service'
+
+  inputs:
+
+    azureSubscription: '$(Parameters.ConnectedServiceName)'
+
+    appType: '$(Parameters.WebAppKind)'
+
+    WebAppName: '$(Parameters.WebAppName)'
