@@ -18,7 +18,7 @@ variables:
     Parameters.ArtifactName: 'drop' #Build param
     Parameters.ConnectedServiceName: 'WebAppDemoRg' #Release param
     Parameters.WebAppKind: 'webApp' #Release param
-    Parameters.WebAppName: 'WebAppDemo' #Release param
+    Parameters.WebAppName: 'StmWebAppDemo' #Release param
     buildConfiguration: 'Release'
     BuildPlatform: 'any cpu'
 

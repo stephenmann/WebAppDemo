@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\azure-pipelines.yml = ..\azure-pipelines.yml
 	EndProjectSection
 EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "DeploymentTemplate", "DeploymentTemplate\DeploymentTemplate.deployproj", "{C65C15A9-69DF-4605-949D-8BB34ADFF39D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{06AB720F-7F5A-4BCA-951E-E0E4B683C41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06AB720F-7F5A-4BCA-951E-E0E4B683C41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06AB720F-7F5A-4BCA-951E-E0E4B683C41A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65C15A9-69DF-4605-949D-8BB34ADFF39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65C15A9-69DF-4605-949D-8BB34ADFF39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65C15A9-69DF-4605-949D-8BB34ADFF39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65C15A9-69DF-4605-949D-8BB34ADFF39D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
