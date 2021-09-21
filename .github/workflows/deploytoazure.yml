@@ -13,7 +13,7 @@ on:
 env:
   AZURE_WEBAPP_NAME: DeployDemoAppWithActions    # set this to your application's name
   AZURE_WEBAPP_PROJECT_PATH: './Demo/Demo.Web'      # set this to the path to your web app project, defaults to the repository root
-  AZURE_WEBAPP_PACKAGE_PATH: './demoapp'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '2.1.x'           # set this to the dot net version to use
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
         run: |
           dotnet restore '${{ env.AZURE_WEBAPP_PROJECT_PATH }}'
           dotnet build '${{ env.AZURE_WEBAPP_PROJECT_PATH }}' --configuration Release --no-restore
-          dotnet publish '${{ env.AZURE_WEBAPP_PROJECT_PATH }}' -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+          dotnet publish '${{ env.AZURE_WEBAPP_PROJECT_PATH }}' -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/demoapp'
           
       # Deploy to Azure Web apps
       - name: 'Run Azure webapp deploy action using publish profile credentials'
@@ -43,4 +43,4 @@ jobs:
         with: 
           app-name: ${{ env.AZURE_WEBAPP_NAME }} # Replace with your app name
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }} # Define secret variable in repository settings as per action documentation
-          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/demoapp'
