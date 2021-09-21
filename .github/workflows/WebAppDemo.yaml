@@ -39,16 +39,16 @@ jobs:
         dotnet-version: 5.0.x
 
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore './Demo'
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build './Demo' --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test
+      run: dotnet test './Demo'
 
     - name: Publish
-      run: dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}' 
+      run: dotnet publish './Demo' -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}' 
 
     # Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
